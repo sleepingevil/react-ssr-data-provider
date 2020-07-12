@@ -1,6 +1,9 @@
 # react-ssr-data-provider
 
-> Type-safe isomorphic data provider to conveniently optimise data fetching during server-side and client-side rendering.
+<img src="https://img.icons8.com/offices/30/000000/warning-shield.png"/> 
+This library is still in PoC stage, and <strong>it's not ready for production</strong>. Feel free to share your ideas. If you want to contribute. Please keep your pull requests small, and understandable.
+
+Type-safe isomorphic data provider to conveniently optimise data fetching during server-side and client-side rendering.
 
 [![NPM](https://img.shields.io/npm/v/react-ssr-data-provider.svg)](https://www.npmjs.com/package/react-ssr-data-provider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
