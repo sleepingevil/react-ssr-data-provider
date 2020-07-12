@@ -16,7 +16,7 @@ export interface SSRDataRequest<T> {
   request: Promise<T>;
 }
 
-interface SSRDataContextBase {
+export interface SSRDataContextBase {
   getScript: () => Promise<string>;
   ssrDataRequests: SSRDataRequest<any>[];
 }

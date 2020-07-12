@@ -62,14 +62,14 @@ import App from './App';
 
 const app = express();
 
-app.get('*', (req, res) => {
+app.get('*', async (req, res) => {
   const myDataContext = {} as DataContext;
 
-  const renderedApp = renderToString(<MyDataProvider context={myDataContext} providers={{ getGreeting: (name) => Promise.resolve(`Hello ${name} from the server side. I'm probably doing an internal service or database call without going through the internet.`) }}>
+  const renderedApp = renderToString(<MyDataProvider dataContext={myDataContext} providers={{ getGreeting: (name) => Promise.resolve(`Hello ${name} from the server side. I'm probably doing an internal service or database call without going through the internet.`) }}>
     <App />
   </MyDataProvider>);
 
-  const dataScript = myDataContext.getScript ? myDataContext.getScript() : '';
+  const dataScript = myDataContext.getScript ? await myDataContext.getScript() : '';
 
   res.send(`<!DOCTYPE html>
     <html lang="en">

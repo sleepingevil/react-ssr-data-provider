@@ -2,7 +2,8 @@ require('ignore-styles');
 
 require('@babel/register')({
   ignore: [/(node_modules)/],
-  presets: ['preset-env', 'preset-react-app', 'preset-typescript']
+  extensions: ['.ts', '.tsx'],
+  presets: ['@babel/preset-env', 'react-app', '@babel/preset-typescript']
 });
 
 require('./server.tsx');

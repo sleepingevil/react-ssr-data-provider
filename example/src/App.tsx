@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react';
+import { useMyDataClient } from './MyDataProvider';
+import { useDataEffect } from 'react-ssr-data-provider';
 
-import { ExampleComponent } from 'react-ssr-data-provider'
-import 'react-ssr-data-provider/dist/index.css'
+const App: React.FC = () => {
+  const { getGreeting } = useMyDataClient();
+  const [greeting, setGreeting] = useState<string>('');
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  const update = useCallback(async () => {
+    setGreeting(await getGreeting('FooBar'));
+  }, [setGreeting, getGreeting]);
 
-export default App
+  useDataEffect(() => {
+    update();
+  }, [getGreeting]);
+
+  return <div>
+    <div>{greeting}</div>
+    <button onClick={update}>Fetch data again</button>
+  </div>;
+};
+
+export default App;
