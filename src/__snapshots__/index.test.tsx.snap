@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataProvider When in the browser it should only use the cache once 1`] = `
+<body>
+  <div>
+    <div>
+      someData
+    </div>
+  </div>
+</body>
+`;
+
+exports[`DataProvider When in the browser it should render consistently 1`] = `
+<body>
+  <div>
+    <div>
+      someData
+    </div>
+  </div>
+</body>
+`;
+
+exports[`DataProvider When in the browser it should render consistently when state is pre-populated 1`] = `
+<body>
+  <div>
+    <div>
+      someCachedData
+    </div>
+  </div>
+</body>
+`;
+
+exports[`DataProvider When on the server it should provide the getScript method that returns an empty script when no data was requested 1`] = `""`;
+
+exports[`DataProvider When on the server it should provide the getScript method that returns an empty script when no data was requested 2`] = `
+<body>
+  <div>
+    <div />
+  </div>
+</body>
+`;
+
+exports[`DataProvider When on the server it should provide the getScript method that returns the script to inject pre-fetched data 1`] = `"<script>window.__dataProvider__ = {prefetchedState: {\\"0\\":{\\"getData\\":\\"someData\\"}}}</script>"`;
+
+exports[`DataProvider When on the server it should provide the getScript method that returns the script to inject pre-fetched data 2`] = `
+<body>
+  <div>
+    <div />
+  </div>
+</body>
+`;
+
+exports[`DataProvider When on the server it should render without a context passed in 1`] = `
+<body>
+  <div>
+    <div />
+  </div>
+</body>
+`;
