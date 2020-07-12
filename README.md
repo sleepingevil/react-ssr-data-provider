@@ -57,14 +57,32 @@ import React from 'react';
 import express from 'express';
 import { renderToString } from 'react-dom/server';
 import { MyDataProvider } from 'MyDataProvider';
+import { DataContext } from 'react-ssr-data-provider';
 import App from './App';
 
 const app = express();
 
 app.get('*', (req, res) => {
-  const renderedApp = renderToString(<MyDataProvider providers={{ getGreeting: (name) => Promise.resolve(`Hello ${name} from the server side. I'm probably doing an internal service or database call without going through the internet.`) }}>
+  const myDataContext = {} as DataContext;
+
+  const renderedApp = renderToString(<MyDataProvider context={myDataContext} providers={{ getGreeting: (name) => Promise.resolve(`Hello ${name} from the server side. I'm probably doing an internal service or database call without going through the internet.`) }}>
     <App />
   </MyDataProvider>);
+
+  const dataScript = myDataContext.getScript ? myDataContext.getScript() : '';
+
+  res.send(`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      ${renderedApp}
+      ${dataScript}
+    </body>
+  </html>`);
 });
 
 app.listen(3000, () => console.log('App is listening on port 3000'));
