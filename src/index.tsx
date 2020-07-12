@@ -39,7 +39,7 @@ export const getDataProvider = <T extends Record<string, (...args: any[]) => Pro
 
         if (dataRequests && dataRequests.length) {
           const dataObjects = await Promise.all(dataRequests);
-          const combinedDataObject = JSON.stringify(mergeAll(dataObjects));
+          const combinedDataObject = JSON.stringify(mergeAll(...dataObjects));
           return `<script>window.__dataProvider__ = {prefetchedState: ${combinedDataObject}}</script>`;
         }
 

@@ -40,7 +40,7 @@ exports[`DataProvider When on the server it should provide the getScript method 
 </body>
 `;
 
-exports[`DataProvider When on the server it should provide the getScript method that returns the script to inject pre-fetched data 1`] = `"<script>window.__dataProvider__ = {prefetchedState: {\\"0\\":{\\"getData\\":\\"someData\\"}}}</script>"`;
+exports[`DataProvider When on the server it should provide the getScript method that returns the script to inject pre-fetched data 1`] = `"<script>window.__dataProvider__ = {prefetchedState: {\\"getData\\":\\"someData\\"}}</script>"`;
 
 exports[`DataProvider When on the server it should provide the getScript method that returns the script to inject pre-fetched data 2`] = `
 <body>
