@@ -7,6 +7,10 @@
 ## Install
 
 ```bash
+yarn add react-ssr-data-provider
+```
+or
+```bash
 npm install --save react-ssr-data-provider
 ```
 
