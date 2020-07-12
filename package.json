@@ -4,6 +4,14 @@
   "description": "Type-safe isomorphic data provider to conveniently optimise data fetching during server-side and client-side rendering.",
   "author": "sleepingevil",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "isomorphic",
+    "data",
+    "provider",
+    "typescript",
+    "ssr"
+  ],
   "repository": "https://github.com/sleepingevil/react-ssr-data-provider.git",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
