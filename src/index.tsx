@@ -21,7 +21,9 @@ export interface SSRDataContextBase {
   ssrDataRequests: SSRDataRequest<any>[];
 }
 
-export const getDataProvider = <T extends Record<string, (...args: any[]) => Promise<any>>>(): GetDataProviderResult<T> => {
+export type DataClientBase = Record<string, (...args: any[]) => Promise<any>>;
+
+export const getDataProvider = <T extends DataClientBase>(): GetDataProviderResult<T> => {
   const SSRDataContext = createContext<SSRDataContextBase & T>({} as SSRDataContextBase & T);
   const ClientDataContext = createContext<T>({} as T);
   if (isServer()) {
