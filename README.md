@@ -24,7 +24,7 @@ MyDataProvider.tsx
 ```tsx
 import { getDataProvider, DataClientBase } from 'react-ssr-data-provider';
 
-// Create your DataClient interface. This ensures ssr and csr data providers are returning the shape of data
+// Create your DataClient interface. This ensures ssr and csr data providers are returning the same shape of data
 export interface MyDataClient extends DataClientBase {
   getGreeting: (name: string) => Promise<string>;
 }
