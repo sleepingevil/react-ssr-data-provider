@@ -139,8 +139,9 @@ const App: React.FC = () => {
 
 - `withDataClient()` higher-order component
 - `withDataProvider()` higher-order component
+- Use [suspense](https://reactjs.org/docs/concurrent-mode-suspense.html) for full server-side rendering as soon as it's available in react
 - use web workers for client-side fetching
-- use worder threads for server-side fetching
+- use worker threads for server-side fetching
 - do you have an idea? Let me know about it on github!
 
 ## License
