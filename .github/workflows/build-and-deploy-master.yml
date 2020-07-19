@@ -65,3 +65,4 @@ jobs:
     - run: "npm version patch -m 'New version: %s'"
     - run: npm publish
     - run: git push
+    - run: git push --tags
