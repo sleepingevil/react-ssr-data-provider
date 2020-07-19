@@ -32,10 +32,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     # Runs a single command using the runners shell
     - run: yarn
-    - run: yarn install-peers    
+    - run: yarn install-peers -f
 
     # Runs a set of commands using the runners shell
-    - run: yarn snyk-protect -f
+    - run: yarn snyk-protect
     
     # Runs a set of commands using the runners shell
     - run: yarn test
