@@ -64,5 +64,4 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: "npm version patch -m 'New version: %s'"
     - run: npm publish
-    - run: git push
-    - run: git push --tags
+    - run: git push --follow-tags
