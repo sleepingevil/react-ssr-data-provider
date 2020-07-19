@@ -35,7 +35,7 @@ jobs:
     - run: yarn install-peers    
 
     # Runs a set of commands using the runners shell
-    - run: yarn snyk-protect
+    - run: yarn snyk-protect -f
     
     # Runs a set of commands using the runners shell
     - run: yarn test
