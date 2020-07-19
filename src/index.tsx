@@ -112,8 +112,8 @@ export const getDataProvider = <
             context[key] = (...args) => {
               // @ts-ignore TODO: find a way to do this without errors
               if (oneTimeCache[key]) {
-                // @ts-ignore TODO: find a way to do this without errors
                 const cacheResponse: Promise<any> = Promise.resolve(
+                  // @ts-ignore TODO: find a way to do this without errors
                   oneTimeCache[key]
                 );
                 // @ts-ignore TODO: find a way to do this without errors
