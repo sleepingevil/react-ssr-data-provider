@@ -1,6 +1,6 @@
 {
   "name": "react-ssr-data-provider",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Type-safe isomorphic data provider to conveniently optimise data fetching during server-side and client-side rendering.",
   "author": "sleepingevil",
   "license": "MIT",
