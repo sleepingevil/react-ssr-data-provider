@@ -4,7 +4,7 @@
 
 Type-safe isomorphic data provider to conveniently optimise data fetching during server-side and client-side rendering.
 
-[![NPM](https://img.shields.io/npm/v/react-ssr-data-provider.svg)](https://www.npmjs.com/package/react-ssr-data-provider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-ssr-data-provider.svg)](https://www.npmjs.com/package/react-ssr-data-provider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![Build and Deploy](https://github.com/sleepingevil/react-ssr-data-provider/workflows/Build%20and%20Deploy/badge.svg?branch=master)
 
 ## Install
 
