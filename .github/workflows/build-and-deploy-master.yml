@@ -63,5 +63,10 @@ jobs:
       env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: "npm version patch -m 'New version: %s'"
+      if: "!startsWith(github.event.head_commit.message, '[Release M')"
+    - run: "npm version minor -m 'New version: %s'"
+      if: "startsWith(github.event.head_commit.message, '[Release Minor]')"
+    - run: "npm version major -m 'New version: %s'"
+      if: "startsWith(github.event.head_commit.message, '[Release Major]')"
     - run: npm publish
     - run: git push --follow-tags
