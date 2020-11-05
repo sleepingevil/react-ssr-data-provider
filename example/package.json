@@ -13,8 +13,8 @@
   "dependencies": {
     "babel-preset-react-app": "^9.1.2",
     "express": "^4.17.1",
-    "react": "link:../node_modules/react",
-    "react-dom": "link:../node_modules/react-dom",
+    "react": "0.14.10",
+    "react-dom": "0.14.10",
     "react-ssr-data-provider": "link:.."
   },
   "devDependencies": {
