@@ -8,14 +8,17 @@
     "start": "yarn build && yarn start:server",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
-    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "babel-preset-react-app": "^9.1.2",
     "express": "^4.17.1",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "react-ssr-data-provider": "link:.."
+    "react-ssr-data-provider": "link:..",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -50,5 +53,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "snyk": true
 }
